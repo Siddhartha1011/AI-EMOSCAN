@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image</title>
+<style>
+  body {
+    background-image: url('photo.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+  }
+
+  .content {
+    position: absolute;
+    top: 35%; 
+    right: 230px; 
+    transform: translateY(-50%);
+    color: black; 
+    font-size: 35px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+  }
+
+  .para-container {
+    position: absolute;
+    top: 55%; 
+    right: 0px; 
+    left: 850px; 
+    transform: translateY(-50%);
+    background-color: black;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .para { 
+    margin: 0;
+    padding: 0;
+    color: white; 
+    font-size: 20px; 
+    font-family: Courier New, Courier, monospace;
+    Text-align:left center;
+  }
+
+  #startButton {
+    position: absolute;
+    top: 80%;
+    left: 78%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="content">
+    EMOSCANS
+  </div>
+  <div class="para-container">
+    <p class="para">
+      EmoScan is an innovative emotion detection system utilizing advanced facial recognition and AI algorithms. The web-based interface offers real-time, multi-modal emotion analysis, enhancing user experience and enabling applications in human-computer interaction and mental health monitoring. EmoScan prioritizes privacy, contributing to a more empathetic and ethically sound technological landscape.
+    </p>
+  </div>
+  <button id="startButton" onclick="runPythonCode()">Start</button>
+  
+  <script>
+    function runPythonCode() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/run_python_code", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send();
+    }
+  </script>
+</body>
+</html>
+
+
