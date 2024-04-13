@@ -1,0 +1,2 @@
+# AI-EMOSCAN
+Emotion Scanner
