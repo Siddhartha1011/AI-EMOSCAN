@@ -15,7 +15,7 @@ def run_python_code():
     from keras.models import  load_model
     import matplotlib.pyplot as plt
 
-    model = load_model("/content/new_best_model.h5")
+    model = load_model("new_best_model.h5")
 
 
     face_haar_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
